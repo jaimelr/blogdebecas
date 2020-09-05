@@ -10,4 +10,7 @@
       <li><%= @scholarship.benefits %></li>
     </ul>
   </div>
+  <div>
+    <%= link_to 'Borrar beca', scholarship_path(@scholarship.id), method: :delete %>
+  </div>
 </div>

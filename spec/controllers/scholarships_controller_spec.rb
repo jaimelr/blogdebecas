@@ -18,4 +18,14 @@ RSpec.describe ScholarshipsController do
       expect(scholarship.reload.title).to eq('bar')
     end
   end
+
+  context '#destroy' do
+    let(:scholarship) { create(:scholarship) }
+
+    it 'removes scholarship from the database' do
+      delete :destroy, params: { id: scholarship.id }
+
+      expect(Scholarship.all.count).to eq(0)      
+    end
+  end
 end

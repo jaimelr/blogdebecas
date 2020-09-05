@@ -32,6 +32,16 @@ class ScholarshipsController < ApplicationController
     # TODO: Handle error case
   end
 
+  def destroy
+    scholarship = Scholarship.find(params[:id])
+
+    if scholarship.delete
+      redirect_to new_scholarship_path
+    end
+
+    # TODO: Handle error case
+  end
+
   private
 
   def scholarship_params
