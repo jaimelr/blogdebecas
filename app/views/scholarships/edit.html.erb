@@ -1,0 +1,13 @@
+<div class="scholarship">
+  <h2>Actualizar beca</h2>
+  <%= form_with model: @scholarship, method: :patch, class: 'scholarship_form' do |form| %>
+    <%= form.text_field :title %>
+    <%= form.text_area :description %>
+    <%= form.date_field :start %>
+    <%= form.date_field :end %>
+    <%= form.text_field :source %>
+    <%= form.text_field :category %>
+    <%= form.text_field :benefits %>
+    <%= form.submit 'Actualizar beca'%>
+  <% end %>
+</div>

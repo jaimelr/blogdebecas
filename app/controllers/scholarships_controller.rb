@@ -14,6 +14,22 @@ class ScholarshipsController < ApplicationController
     if scholarship.save!
       redirect_to scholarship_path(id: scholarship.id)
     end
+
+    # TODO: Handle error case
+  end
+
+  def edit
+    @scholarship = Scholarship.find(params[:id])
+  end
+
+  def update
+    scholarship = Scholarship.find(params[:id])
+    
+    if scholarship.update!(scholarship_params)
+      redirect_to scholarship_path(id: scholarship.id)
+    end
+
+    # TODO: Handle error case
   end
 
   private

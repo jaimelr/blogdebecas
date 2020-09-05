@@ -8,4 +8,14 @@ RSpec.describe ScholarshipsController do
       expect(Scholarship.all.count).to eq(1)
     end
   end
+
+  context '#update' do
+    let(:scholarship) { create(:scholarship, title: 'foo') }
+
+    it 'updates an existing scholarship' do
+      patch :update, params: { id: scholarship.id, scholarship: { title: 'bar'} }
+
+      expect(scholarship.reload.title).to eq('bar')
+    end
+  end
 end
