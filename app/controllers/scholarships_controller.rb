@@ -1,5 +1,9 @@
 class ScholarshipsController < ApplicationController
   
+  def show
+    @scholarship = Scholarship.find(params[:id])
+  end
+
   def new
     @scholarship = Scholarship.new
   end
@@ -8,7 +12,7 @@ class ScholarshipsController < ApplicationController
     scholarship = Scholarship.new(scholarship_params)
 
     if scholarship.save!
-      redirect_back(fallback_location: root_path)
+      redirect_to scholarship_path(id: scholarship.id)
     end
   end
 
