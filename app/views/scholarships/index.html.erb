@@ -1,13 +1,34 @@
-<div class="scholarships">
-  <% @scholarships.each do |scholarship| %>
-    <ul>
-      <li><%= scholarship.title %></li>
-      <li><%= scholarship.description %></li>
-      <li><%= scholarship.start %></li>
-      <li><%= scholarship.end %></li>
-      <li><%= scholarship.source %></li>
-      <li><%= scholarship.category %></li>
-      <li><%= scholarship.benefits %></li>
-    </ul>
-  <% end %>
+<div class="scholarships-index">
+  <section class="scholarships-index__list">
+    <% @scholarships.each do |scholarship| %>
+      <ul class="scholarships-index__item">
+        <li class="scholarships-index__item-data title">
+          <span>Título: </span><%= scholarship.title %>
+        </li>
+        <li class="scholarships-index__item-data">
+          <span>Descripción: </span><%= scholarship.description %>
+        </li>
+        <li class="scholarships-index__item-data">
+          <span>Fecha de inicio: </span><%= scholarship.start %>
+        </li>
+        <li class="scholarships-index__item-data">
+          <span>Fecha de inicio: </span><%= scholarship.end %>
+        </li>
+        <li class="scholarships-index__item-data">
+          <span>Convocatoria completa: </span><%= scholarship.source %>
+        </li>
+        <li class="scholarships-index__item-data">
+          <span>Categoría: </span><%= scholarship.category %>
+        </li>
+        <li class="scholarships-index__item-data">
+          <span>Beneficios: </span><%= scholarship.benefits %>
+        </li>
+        <li class="scholarships-index__item-actions">
+          <%= link_to 'Ver', scholarship_path(scholarship.id), class: 'actions__view' %>
+          <%= link_to 'Editar', edit_scholarship_path(scholarship.id), class: 'actions__edit' %>
+          <%= link_to 'Borrar', scholarship_path(scholarship.id), method: :delete, class: 'actions__delete' %>
+        </li>
+      </ul>
+    <% end %>
+  </section>
 </div>
