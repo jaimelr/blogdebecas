@@ -1,0 +1,13 @@
+<div class="scholarships">
+  <% @scholarships.each do |scholarship| %>
+    <ul>
+      <li><%= scholarship.title %></li>
+      <li><%= scholarship.description %></li>
+      <li><%= scholarship.start %></li>
+      <li><%= scholarship.end %></li>
+      <li><%= scholarship.source %></li>
+      <li><%= scholarship.category %></li>
+      <li><%= scholarship.benefits %></li>
+    </ul>
+  <% end %>
+</div>
