@@ -1,0 +1,31 @@
+<div>
+  <%= form.label 'Título de la beca' %>
+  <%= form.text_field :title, class: 'scholarship__form__input scholarship__form__text' %>
+</div>
+<div>
+  <%= form.label 'Descripción' %>
+  <%= form.text_area :description, class: 'scholarship__form__input scholarship__form__text' %>
+</div>
+<div class="scholarship__form__dates">
+  <div>
+    <%= form.label 'Fecha de inicio' %>
+    <%= form.date_field :start, class: 'scholarship__form__input' %>
+  </div>
+  <div>
+    <%= form.label 'Fecha de termino' %>
+    <%= form.date_field :end, class: 'scholarship__form__input' %>
+  </div>
+</div>
+<div>
+  <%= form.label 'Link a convocatoria completa' %>
+  <%= form.text_field :source, class: 'scholarship__form__input scholarship__form__text' %>
+</div>
+<div>
+  <%= form.label 'Categoría'%>
+  <%= form.text_field :category, class: 'scholarship__form__input' %>
+</div>
+<div>
+  <%= form.label 'Beneficios' %>
+  <%= form.text_field :benefits, class: 'scholarship__form__input scholarship__form__text' %>
+</div>
+<%= form.submit submit_text, class: 'scholarship__form__submit' %>
