@@ -10,18 +10,6 @@
     font-weight: bold;
   }
 
-  section {
-    border-style: solid;
-    border-width: 2px;
-    border-color: $primary-blue;
-    border-radius: 8px;
-
-    padding-right: 8px;
-    padding-left: 8px;
-
-    position: relative;
-  }
-
   &__actions {
     position: absolute;
     bottom: 24px;
