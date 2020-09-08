@@ -1,16 +1,32 @@
-<div>
-  <h2><%= @scholarship.title %></h2>
-  <div>
-    <ul>
-      <li><%= @scholarship.description %></li>
-      <li><%= @scholarship.start %></li>
-      <li><%= @scholarship.end %></li>
-      <li><%= @scholarship.source%></li>
-      <li><%= @scholarship.category %></li>
-      <li><%= @scholarship.benefits %></li>
-    </ul>
-  </div>
-  <div>
-    <%= link_to 'Borrar beca', scholarship_path(@scholarship.id), method: :delete %>
-  </div>
+<div class="scholarship-show">
+  <section>
+    <h2><span>Título: </span><%= @scholarship.title %></h2>
+    <dl>
+      <dt class="scholarship-show__label">Descripción:</dt>
+      <dd><%= @scholarship.description %></dd>
+
+      <dt class="scholarship-show__label">Fecha de inicio:</dt>
+      <dd><%= @scholarship.start %></dd>
+
+      <dt class="scholarship-show__label">Fecha de termino:</dt>
+      <dd><%= @scholarship.end %></dd>
+
+      <dt class="scholarship-show__label">Convocatoria completa:</dt>
+      <dd><%= @scholarship.source%></dd>
+
+      <dt class="scholarship-show__label">Categoría:</dt>
+      <dd><%= @scholarship.category %></dd>
+
+      <dt class="scholarship-show__label">Beneficios:</dt>
+      <dd><%= @scholarship.benefits %></dd>
+    </dl>
+    <div class="scholarship-show__actions">
+      <%= link_to edit_scholarship_path(@scholarship.id), class: 'btn__actions btn__circle btn__actions--edit' do %>
+        <% fa_icon 'pencil' %>
+      <% end %>
+      <%= link_to scholarship_path(@scholarship.id), method: :delete, class: 'btn__actions btn__circle btn__actions--delete' do %>
+        <% fa_icon 'trash'%>
+      <% end %>
+    </div>
+  </section>
 </div>
