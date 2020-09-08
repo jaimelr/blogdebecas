@@ -1,0 +1,22 @@
+.btn {
+  &__circle {
+    border-radius: 50%;
+
+    margin-right: 4px;
+    margin-left: 4px;
+
+    padding: 12px;
+  }
+
+  &__actions {
+    color: white;
+  }
+
+  &__actions--edit {
+    background-color: $neutral;
+  }
+
+  &__actions--delete {
+    background-color: $danger;
+  }
+}
