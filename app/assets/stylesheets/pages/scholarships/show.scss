@@ -4,6 +4,8 @@
   }
 
   &__actions {
+    display: flex;
+    
     position: absolute;
     bottom: 24px;
     right: 16px;
