@@ -14,4 +14,25 @@
   z-index: 1;
 
   height: 50px;
+
+  &__logo {
+    @extend %navlink-base;
+
+    font-size: 1.5em;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+
+  &__group {
+    margin: 0 16px;
+  }
+
+  &__item {
+    @extend %navlink-base;
+
+    margin-left: 16px;
+  }
 }
