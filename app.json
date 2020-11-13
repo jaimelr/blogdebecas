@@ -1,0 +1,8 @@
+{
+  "name": "Blog de Becas",
+  "description": "Web application and API to create and share scholarships.",
+  "repository": "https://github.com/jaimelr/blogdebecas",
+  "scripts": {
+    "postdeploy": "bundle exec rails db:migrate"
+  }
+}
