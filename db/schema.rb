@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_13_041039) do
+ActiveRecord::Schema.define(version: 2020_11_13_142848) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,10 +27,15 @@ ActiveRecord::Schema.define(version: 2020_11_13_041039) do
     t.date "start"
     t.date "end"
     t.string "source"
-    t.string "category"
     t.text "benefits"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "categories_id"
+    t.bigint "category_id", null: false
+    t.index ["categories_id"], name: "index_scholarships_on_categories_id"
+    t.index ["category_id"], name: "index_scholarships_on_category_id"
   end
 
+  add_foreign_key "scholarships", "categories"
+  add_foreign_key "scholarships", "categories", column: "categories_id"
 end

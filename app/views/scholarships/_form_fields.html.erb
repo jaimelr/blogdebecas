@@ -21,8 +21,8 @@
   <%= form.text_field :source, class: 'scholarship__form__input scholarship__form__text' %>
 </div>
 <div>
-  <%= form.label 'Categoría'%>
-  <%= form.text_field :category, class: 'scholarship__form__input' %>
+  <%= form.label 'Categoría' %>
+  <%= form.select :category_id, options_from_collection_for_select(@categories, 'id', 'name') %>
 </div>
 <div>
   <%= form.label 'Beneficios' %>
