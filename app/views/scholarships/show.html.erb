@@ -19,6 +19,11 @@
 
       <dt class="scholarship-show__label">Beneficios:</dt>
       <dd><%= @scholarship.benefits %></dd>
+
+      <dt class="scholarship-show__label">Requerimientos:</dt>
+      <% @scholarship.requirements.each do |requirement| %>
+        <dd><%= requirement.name %></dd>
+      <% end %>
     </dl>
     <div class="scholarship-show__actions">
       <%= link_to edit_scholarship_path(@scholarship.id), class: 'btn__actions btn__circle btn__actions--edit' do %>
@@ -28,5 +33,8 @@
         <% fa_icon 'trash'%>
       <% end %>
     </div>
+  </section>
+  <section>
+    <%= render partial: 'requirements', locals: { scholarship: @scholarship } %>
   </section>
 </div>

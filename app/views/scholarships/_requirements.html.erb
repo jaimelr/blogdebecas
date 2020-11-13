@@ -1,0 +1,8 @@
+<div>
+  <h3>Agregar requerimientos</h3>
+  <%= form_with model: Requirement.new, id: 'requirementsForm', class: 'requirements__form', remote: true do |form| %>
+    <%= form.hidden_field :scholarship_id, value: @scholarship.id %>
+    <%= form.text_field :name %>
+    <%= form.submit 'Agregar', class: 'requirements__form__btn'%>
+  <% end %>
+</div>
