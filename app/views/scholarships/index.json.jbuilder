@@ -1,1 +1,1 @@
-json.scholarship @scholarships
+json.array! @scholarships
