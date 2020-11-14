@@ -20,6 +20,9 @@
       <dt class="scholarship-show__label">Beneficios:</dt>
       <dd><%= @scholarship.benefits %></dd>
 
+      <dt class="scholarship-show__label">Estado:</dt>
+      <dd><%= scholarship_status_text(@scholarship) %></dd>
+
       <dt class="scholarship-show__label">Requerimientos:</dt>
       <% @scholarship.requirements.each do |requirement| %>
         <dd><%= requirement.name %></dd>

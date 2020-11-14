@@ -15,6 +15,7 @@ class ScholarshipsController < ApplicationController
 
   def create
     scholarship = Scholarship.new(scholarship_params)
+    set_status(scholarship)
 
     if scholarship.save!
       redirect_to scholarship_path(id: scholarship.id)
@@ -52,5 +53,9 @@ class ScholarshipsController < ApplicationController
 
   def scholarship_params
     params.require(:scholarship).permit(:title, :description, :start, :end, :source, :category_id, :benefits)
+  end
+
+  def set_status(scholarship)
+    scholarship.status = scholarship.end < Date.today
   end
 end
