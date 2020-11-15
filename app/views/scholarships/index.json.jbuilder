@@ -8,4 +8,5 @@ json.array! @scholarships do |scholarship|
   json.benefits scholarship.benefits
   json.requirements scholarship.requirements
   json.category_id scholarship.category_id
+  json.status scholarship.status
 end

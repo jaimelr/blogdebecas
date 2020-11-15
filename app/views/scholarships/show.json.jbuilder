@@ -8,4 +8,5 @@ json.scholarship do
   json.benefits @scholarship.benefits
   json.requirements @scholarship.requirements
   json.category @scholarship.category
+  json.status @scholarship.status
 end
