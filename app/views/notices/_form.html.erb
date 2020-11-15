@@ -1,0 +1,9 @@
+<%= form.label :title, 'Título' %>
+<%= form.text_field :title %>
+<%= form.label :description, 'Descripción' %>
+<%= form.text_area :description %>
+<div>
+  <%= form.label :active %>
+  <%= form.check_box :active %>
+</div>
+<%= form.submit submit_text, class: 'form__submit' %>

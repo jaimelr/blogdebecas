@@ -1,7 +1,7 @@
 <div class="scholarship scholarship-new">
   <h2>Crear beca</h2>
     <section class="section--basic">
-      <%= form_with model: @scholarship, class: 'scholarship__form' do |form| %>
+      <%= form_with model: @scholarship, class: 'form' do |form| %>
       <%= render partial: 'form_fields', locals: { form: form, submit_text: 'Crear beca' } %>
     <% end %>
   </section>

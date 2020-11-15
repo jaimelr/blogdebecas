@@ -1,0 +1,8 @@
+<div class="content">
+  <h3>Crear aviso</h3>
+  <section class="section--basic">
+    <%= form_with model: Notice.new, class: 'form' do |form| %>
+      <% render partial: 'form', locals: { form: form, submit_text: 'Crear aviso' } %>
+    <% end %>
+  </section>
+</div>

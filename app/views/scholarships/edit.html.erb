@@ -1,7 +1,7 @@
 <div class="scholarship scholarship-edit">
   <h2>Actualizar beca</h2>
   <section class="section--basic">
-    <%= form_with model: @scholarship, method: :patch, class: 'scholarship__form' do |form| %>
+    <%= form_with model: @scholarship, method: :patch, class: 'form' do |form| %>
       <% render partial: 'form_fields', locals: { form: form, submit_text: 'Actualizar beca' } %>
     <% end %>
   </section>

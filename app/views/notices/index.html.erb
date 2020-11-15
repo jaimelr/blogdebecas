@@ -1,0 +1,13 @@
+<h2>Avisos</h2>
+<section>
+  <% @notices.each do |notice| %>
+    <div>
+      <dt>Título</dt>
+      <dd><%= notice.title %></dd>
+      <dt>Descripción</dt>
+      <dd><%= notice.description %></dd>
+      <dt>Fecha de creación</dt>
+      <dd><%= notice.created_at %></dd>
+    </div>
+  <% end %>
+</section>
