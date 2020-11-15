@@ -1,6 +1,9 @@
 class ScholarshipsController < ApplicationController
 
   def index
+    if params[:category]
+      return @scholarships = Scholarship.where(category: find_category)
+    end
     @scholarships = Scholarship.all
   end
 
@@ -57,5 +60,9 @@ class ScholarshipsController < ApplicationController
 
   def set_status(scholarship)
     scholarship.status = scholarship.end < Date.today
+  end
+
+  def find_category
+    @category = Category.find_by(name: params[:category])
   end
 end
