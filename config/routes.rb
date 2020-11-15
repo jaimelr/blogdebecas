@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :notices
   resources :categories
   resources 'scholarships'
   resources :requirements
