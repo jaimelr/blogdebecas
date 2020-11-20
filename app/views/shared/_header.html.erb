@@ -2,8 +2,10 @@
   <div class="content navbar">
     <%= link_to 'Blog de Becas', root_path, class: 'header__logo' %>
     <div class="navbar__group">
-      <%= link_to 'Inicio', scholarships_path, class: 'navbar__item' %>
+      <%= link_to 'Becas', scholarships_path, class: 'navbar__item' %>
+      <%= link_to 'Avisos', notices_path, class: 'navbar__item' %>
       <%= link_to 'Crear beca', new_scholarship_path, class: 'navbar__item' %>
+      <%= link_to 'Crear aviso', new_notice_path, class: 'navbar__item' %>
     </div>
   </div>
 </header>
