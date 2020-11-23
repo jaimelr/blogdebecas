@@ -1,23 +1,15 @@
 .scholarships-index {
-  margin: 0 auto;
-  max-width: 1280px;
-
   &__item {
+    @extend %index-item;
+
     background-color: $primary-blue;
 
     border-color: $primary-yellow;
-    border-radius: 4px;
-    border-style: solid;
-    border-width: 2px;
 
     color: white;
 
     display: flex;
     flex-direction: column;
-
-    padding-right: 40px;
-
-    position: relative;
 
     .title {
       border-bottom-style: solid;
@@ -36,51 +28,6 @@
 
     span {
       font-weight: bold;
-    }
-  }
-
-  &__item-actions {
-    background-color: white;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    height: 100%;
-
-    list-style-type: none;
-
-    position: absolute;
-    right: 0;
-
-    a {
-      color: white;
-      text-decoration: none;
-
-      border-left-color: $primary-yellow;
-      border-left-style: solid;
-      border-left-width: 2px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      flex: 1;
-
-      padding-right: 8px;
-      padding-left: 8px;
-    }
-
-    .actions__view {
-      background-color: $success;
-    }
-
-    .actions__edit {
-      background-color: $neutral;
-    }
-
-    .actions__delete {
-      background-color: $danger;
     }
   }
 }

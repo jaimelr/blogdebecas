@@ -1,13 +1,20 @@
-<h2>Avisos</h2>
-<section>
-  <% @notices.each do |notice| %>
-    <div>
-      <dt>Título</dt>
-      <dd><%= notice.title %></dd>
-      <dt>Descripción</dt>
-      <dd><%= notice.description %></dd>
-      <dt>Fecha de creación</dt>
-      <dd><%= notice.created_at %></dd>
-    </div>
-  <% end %>
-</section>
+<div class="index">
+  <h2>Avisos</h2>
+  <section class="notices-index__list">
+    <% @notices.each do |notice| %>
+      <div class="notices-index__item">
+        <dt class="notices-index__item-title">Título</dt>
+        <dd><%= notice.title %></dd>
+        <dt class="notices-index__item-title">Descripción</dt>
+        <dd><%= notice.description %></dd>
+        <dt class="notices-index__item-title">Fecha de creación</dt>
+        <dd><%= notice.created_at %></dd>
+        <div class="index__item-actions">
+          <%= link_to 'Ver', notice_path(notice.id), class: 'actions__view' %>
+          <%= link_to 'Editar', edit_notice_path(notice.id), class: 'actions__edit' %>
+          <%= link_to 'Borrar', notice_path(notice.id), method: :delete, class: 'actions__delete' %>
+        </div>
+      </div>
+    <% end %>
+  </section>
+</div>

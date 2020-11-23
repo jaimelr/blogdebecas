@@ -1,9 +1,19 @@
-<h2>Aviso</h2>
-<section>
-  <dt>Título</dt>
-  <dd><%= @notice.title %></dd>
-  <dt>Descripción</dt>
-  <dd><%= @notice.description %></dd>
-  <dt>Estado</dt>
-  <dd><%= notice_status %></dd>
-</section>
+<div class="content">
+  <h2>Aviso</h2>
+  <section class="section--basic">
+    <dt>Título</dt>
+    <dd><%= @notice.title %></dd>
+    <dt>Descripción</dt>
+    <dd><%= @notice.description %></dd>
+    <dt>Estado</dt>
+    <dd><%= notice_status %></dd>
+    <div class="notice-show__actions">
+      <%= link_to edit_notice_path(@notice.id), class: 'btn__actions btn__circle btn__actions--edit' do %>
+        <% fa_icon 'pencil' %>
+      <% end %>
+      <%= link_to notice_path(@notice.id), method: :delete, class: 'btn__actions btn__circle btn__actions--delete' do %>
+        <% fa_icon 'trash'%>
+      <% end %>
+    </div>
+  </section>
+</div>

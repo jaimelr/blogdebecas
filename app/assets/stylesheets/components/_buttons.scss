@@ -33,3 +33,49 @@
     background-color: white;
   }
 }
+
+.index__item-actions {
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  height: 100%;
+
+  list-style-type: none;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    border-left-color: $primary-yellow;
+    border-left-style: solid;
+    border-left-width: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .actions__view {
+    background-color: $success;
+  }
+
+  .actions__edit {
+    background-color: $neutral;
+  }
+
+  .actions__delete {
+    background-color: $danger;
+  }
+}

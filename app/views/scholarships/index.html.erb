@@ -1,4 +1,4 @@
-<div class="scholarships-index">
+<div class="index">
   <section class="scholarships-index__list">
     <% @scholarships.each do |scholarship| %>
       <ul class="scholarships-index__item">
@@ -23,7 +23,7 @@
         <li class="scholarships-index__item-data">
           <span>Beneficios: </span><%= scholarship.benefits %>
         </li>
-        <li class="scholarships-index__item-actions">
+        <li class="index__item-actions">
           <%= link_to 'Ver', scholarship_path(scholarship.id), class: 'actions__view' %>
           <%= link_to 'Editar', edit_scholarship_path(scholarship.id), class: 'actions__edit' %>
           <%= link_to 'Borrar', scholarship_path(scholarship.id), method: :delete, class: 'actions__delete' %>

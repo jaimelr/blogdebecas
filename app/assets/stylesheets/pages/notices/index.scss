@@ -1,0 +1,15 @@
+.notices-index {
+  &__item {
+    @extend %index-item;
+
+    margin-bottom: 10px;
+
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-top: 10px;
+  }
+
+  &__item-title {
+    font-weight: bold;
+  }
+}
